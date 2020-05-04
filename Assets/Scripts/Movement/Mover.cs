@@ -9,20 +9,13 @@ public class Mover : MonoBehaviour {
 
 	// Update is called every frame
 	void Update(){    
-		if(Input.GetMouseButton(0)){
-			MoveToClick();
-		}
 		UpdateAnimator();
 	}
 
-	private void MoveToClick(){
-		Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-		RaycastHit hit;
-		bool hasHit = Physics.Raycast(ray, out hit);	// Physics.Raycast(Ray, RaycastHit) -  API
-		if(hasHit){
-			GetComponent<NavMeshAgent>().destination = hit.point; //RaycastHit.point - API
-		}
+	public void MoveTo(Vector3 destination){
+		GetComponent<NavMeshAgent>().destination = destination;
 	}
+  
 
 	private void UpdateAnimator(){
 		Vector3 velocity = GetComponent<NavMeshAgent>().velocity;
