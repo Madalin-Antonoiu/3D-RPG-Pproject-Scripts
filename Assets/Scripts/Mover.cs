@@ -12,6 +12,7 @@ public class Mover : MonoBehaviour {
 		if(Input.GetMouseButtonDown(0)){
 			MoveToClick();
 		}
+		UpdateAnimator();
 	}
 
 	private void MoveToClick(){
@@ -21,6 +22,13 @@ public class Mover : MonoBehaviour {
 		if(hasHit){
 			GetComponent<NavMeshAgent>().destination = hit.point; //RaycastHit.point - API
 		}
+	}
+
+	private void UpdateAnimator(){
+		Vector3 velocity = GetComponent<NavMeshAgent>().velocity;
+		Vector3 localVelocity = transform.InverseTransformDirection(velocity); // InverseTransformDirection - "No matter where you are in the world, lets convert that into animator for e.g you're moving forward at 3units"
+		float speed = localVelocity.z;
+		GetComponent<Animator>().SetFloat("forwardSpeed", speed); // Animator - Parameters - forwardSpeed exactly!
 	}
 
 }
