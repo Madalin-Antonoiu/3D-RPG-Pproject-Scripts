@@ -9,7 +9,7 @@ public class Mover : MonoBehaviour {
 
 	// Update is called every frame
 	void Update(){    
-		if(Input.GetMouseButtonDown(0)){
+		if(Input.GetMouseButton(0)){
 			MoveToClick();
 		}
 		UpdateAnimator();
