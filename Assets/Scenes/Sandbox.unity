@@ -1251,6 +1251,10 @@ PrefabInstance:
       propertyPath: weaponRange
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1357904004, guid: 8b0b30cf26cf4714099b356836eb3ead, type: 3}
+      propertyPath: timeBetweenAttacks
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 126202203813699329, guid: 8b0b30cf26cf4714099b356836eb3ead,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1872,6 +1876,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4803191163303326711, guid: fc0035cc9c88d424498113151a9d7bb5,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.90503234
+      objectReference: {fileID: 0}
+    - target: {fileID: 4803191163303326711, guid: fc0035cc9c88d424498113151a9d7bb5,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.4444779
+      objectReference: {fileID: 0}
+    - target: {fileID: 4803191163303326711, guid: fc0035cc9c88d424498113151a9d7bb5,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.0930628
+      objectReference: {fileID: 0}
+    - target: {fileID: 5039340994242201461, guid: fc0035cc9c88d424498113151a9d7bb5,
+        type: 3}
+      propertyPath: health
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc0035cc9c88d424498113151a9d7bb5, type: 3}
