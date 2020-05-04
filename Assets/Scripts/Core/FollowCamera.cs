@@ -1,14 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class FollowCamera : MonoBehaviour {
-   
-    [SerializeField] Transform target; // We need to know the position, that`s why it is of type Transform
+namespace RPG.Core {
+    public class FollowCamera : MonoBehaviour {
 
+        [SerializeField] Transform target; // We need to know the position, that`s why it is of type Transform
 
- 
-    void LateUpdate(){
-        transform.position = target.position; // The position of object this script is attached to = position of our target (player)
+        void LateUpdate(){
+            transform.position = target.position; // The position of object this script is attached to = position of our target (player)
+        }
     }
 }
