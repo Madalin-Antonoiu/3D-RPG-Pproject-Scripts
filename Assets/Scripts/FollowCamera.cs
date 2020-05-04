@@ -8,7 +8,7 @@ public class FollowCamera : MonoBehaviour {
 
 
  
-    void Update(){
+    void LateUpdate(){
         transform.position = target.position; // The position of object this script is attached to = position of our target (player)
     }
 }
