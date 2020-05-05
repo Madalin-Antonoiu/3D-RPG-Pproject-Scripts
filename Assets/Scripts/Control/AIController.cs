@@ -63,8 +63,7 @@ namespace RPG.Control {
     }
 
     // Called by Unity
-    private void OnDrawGizmos() {
-
+    private void OnDrawGizmosSelected() {
 
       Gizmos.color = Color.yellow;
       Gizmos.matrix = Matrix4x4.TRS(transform.position, Quaternion.identity, new Vector3(1, 0, 1));
