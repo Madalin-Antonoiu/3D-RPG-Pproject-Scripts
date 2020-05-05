@@ -54,13 +54,13 @@ namespace RPG.Combat {
       return Vector3.Distance(transform.position, target.transform.position) < weaponRange;
     }
 
-		public bool CanAttack(CombatTarget commbatTarget){
+		public bool CanAttack(GameObject commbatTarget){
       if (commbatTarget == null) return false;
 			Health targetToTest = commbatTarget.GetComponent<Health>();
 			return targetToTest != null && !targetToTest.IsDead(); 
 		}
 
-    public void Attack(CombatTarget combatTarget){
+    public void Attack(GameObject combatTarget){
 			GetComponent<ActionScheduler>().StartAction(this);
 			target = combatTarget.GetComponent<Health>();
 		}
