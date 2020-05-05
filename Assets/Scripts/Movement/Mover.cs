@@ -7,14 +7,17 @@ namespace RPG.Movement {
 	public class Mover : MonoBehaviour, IAction {
    
 		[SerializeField] Transform target;
-
 		NavMeshAgent navMeshAgent;
+		Health health;
 
 		private void Start(){
+      health = GetComponent<Health>();
 			navMeshAgent = GetComponent<NavMeshAgent>();
 		}
 
     void Update(){    
+			navMeshAgent.enabled = !health.IsDead(); // boolean, will disable nav mesh agent if dead, so i can walk over dead bodies
+
 			UpdateAnimator();
 		}
 
