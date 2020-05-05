@@ -63,9 +63,14 @@ namespace RPG.Control {
     }
 
     // Called by Unity
-    private void OnDrawGizmosSelected() {
-      Gizmos.color = Color.blue; 
-      Gizmos.DrawWireSphere(transform.position, chaseDistance);
+    private void OnDrawGizmos() {
+
+
+      Gizmos.color = Color.yellow;
+      Gizmos.matrix = Matrix4x4.TRS(transform.position, Quaternion.identity, new Vector3(1, 0, 1));
+      Gizmos.DrawWireSphere(Vector3.zero, chaseDistance);
+ 
+
     }
 
 
