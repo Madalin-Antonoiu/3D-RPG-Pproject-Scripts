@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 
+//Patrol Path Y needs to be 0 or close to ground to work.
 namespace RPG.Control{
 
   public class PatrolPath : MonoBehaviour {
