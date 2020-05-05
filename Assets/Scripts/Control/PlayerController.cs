@@ -29,7 +29,7 @@ namespace RPG.Control {
 
 				if(target == null) continue;
 				if(!GetComponent<Fighter>().CanAttack(target.gameObject)) continue; // means go to next hit in foreach
-				if(Input.GetMouseButtonDown(0)){
+				if(Input.GetMouseButton(0)){
 					GetComponent<Fighter>().Attack(target.gameObject);
 				}
         return true;
